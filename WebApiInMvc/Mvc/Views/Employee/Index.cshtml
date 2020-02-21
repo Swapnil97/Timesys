@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Mvc.Models.mvcEmployeeModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+
+    <a href="@Url.Action("AddOrEdit","Employee")" class="btn btn-default">New Employee</a>
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>Actions to Perform</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@ 
+
+            <a href="@Url.Action("AddOrEdit","Employee",new {id=item.EmployeeID})" class="btn btn-default">Edit</a>
+
+            <a onclick="Delete(@item.EmployeeID)" class="btn btn-default">Delete</a>
+        </td>
+    </tr>
+}
+
+</table>
+
+@section scripts{
+    <script>
+        function Delete(id) {
+            window.location.href = '@Url.Action("Delete","Employee")/' + id;
+        }
+    </script>
+    }

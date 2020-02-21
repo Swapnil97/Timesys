@@ -1,0 +1,30 @@
+﻿@{
+
+    if (IsPost)
+    {
+        string monthname = Request.Form["MonthName"];
+
+        <text>
+            You entered:
+            <br />
+            Month Name: @monthname
+            <br />
+        </text>
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Displaying the result</title>
+</head>
+<body>
+    <form>
+        <label for="MonthName">Enter Month:</label>
+        <input type="text" name="MonthName" value="" />
+        @Html.ValidationMessage("monthname")
+        <label>&nbsp;</label>
+        <input type="submit" value="Submit" class="submit" />
+    </form>
+</body>
+</html>

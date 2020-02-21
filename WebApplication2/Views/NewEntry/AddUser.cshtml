@@ -1,0 +1,51 @@
+﻿@model WebApplication2.TimesheetExcel
+
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#EnterDate").datepicker();
+    });
+</script>
+
+<h2>Add User</h2>
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="col-md-4">Name                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Name)</div>
+        <div class="col-md-4">Team                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Team)</div>
+        <div class="col-md-4">Shift                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Shift)</div>
+        <div class="col-md-4">Application                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Application)</div>
+        <div class="col-md-4">Task                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Task)</div>
+        <div class="col-md-4">Reference Number           : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Reference_Number)</div>
+        <div class="col-md-4">Activity                   : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Activity)</div>
+        <div class="col-md-4">Release                    : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Release)</div>
+        <div class="col-md-4">Priority Severity          : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Priority_Severity)</div>
+        <div class="col-md-4">Description                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Description)</div>
+        <div class="col-md-4">Hours spent this week      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Hours_spent_this_week)</div>
+        <div class="col-md-4">Month                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Month)</div>
+        <div class="col-md-4">Year                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Year)</div>
+        <div class="col-md-4">Date                       : </div>
+        <div>
+            <div class="col-md-10">
+                <div id="EnterDate">
+                    @Html.EditorFor(m => m.Start_Date, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <input type="submit" value="Create Entry" />
+        </div>
+    </div>
+}
+
+

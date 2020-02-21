@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+@using System.Web.WebPages.Html;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="one">
+        @*Blank Textbox*@
+        <h4>Please Enter Your Name:</h4>  @Html.TextBox("EmployeeName", null, new { @class = "form-control" })
+        <br />    <br />
+        @*Textbox with placeholder*@
+        <h4>Please Enter Your Age:</h4>   @Html.TextBox("EmployeeAge", "For Eg. 20", new { @class = "form-control" })
+        <br />    <br />
+        @*Textarea*@
+        <h4>Your Comment:</h4> @Html.TextArea("Description", null, new { @class = "form-control" })
+        <br />    <br />
+        <h4>Present :</h4> @Html.CheckBox("isPresent", true)
+        <br />    <br />
+
+        @Html.DropDownList("Test", new List<SelectListItem>
+{
+   new SelectListItem{ Text="ASP.NET MVC", Value = "1" },
+   new SelectListItem{ Text="ASP.NET WEB API", Value = "2" },
+   new SelectListItem{ Text="ENTITY FRAMEWORK", Value = "3" },
+   new SelectListItem{ Text="DOCUSIGN", Value = "4" },
+   new SelectListItem{ Text="ORCHARD CMS", Value = "5" },
+   new SelectListItem{ Text="JQUERY", Value = "6" },
+   new SelectListItem{ Text="ZENDESK", Value = "7" },
+   new SelectListItem{ Text="LINQ", Value = "8" },
+   new SelectListItem{ Text="C#", Value = "9" },
+   new SelectListItem{ Text="GOOGLE ANALYTICS", Value = "10" },
+})
+
+        <br />    <br />
+                  <h4>Gender:</h4> <br />
+        Male:   @Html.RadioButton("Gender", "Male")
+        Female: @Html.RadioButton("Gender", "Female")
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Here , i have used in memory data to display records to view.
+
+there is no db connection .
+created a list inserted data and displayed it.

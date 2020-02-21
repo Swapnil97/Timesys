@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Placing Multiple Inputs within an Input Group in Bootstrap 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .bs-example {
+            margin: 30px;
+        }
+        .form-control{
+            font-size:x-large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="bs-example">
+        <form>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 style="text-align:center;">Employee - Registration Page</h1>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Your Name</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="dropdown jumbotron">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Designation</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Manager</a>
+                    <a href="#" class="dropdown-item">Lead</a>
+                    <a href="#" class="dropdown-item">Trainee</a>
+                    <a href="#" class="dropdown-item">BA</a>
+                    <a href="#" class="dropdown-item">Dev</a>
+                    <a href="#" class="dropdown-item">Tester</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>                            

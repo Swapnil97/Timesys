@@ -1,0 +1,81 @@
+﻿@model IEnumerable<TimeZ.DisplayMonthlyTrends_Result1>
+
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<form method="post">
+    <div>
+        <label for="MonthName">Change Month Name:</label>
+        <input type="text" name="month" placeholder="enter month" />
+        <input type="text" name="year" placeholder="enter year" required pattern="[0-9]{4}" title="Format YYYY" />
+    </div>
+
+    <div>
+        <input type="submit" value="Submit" class="submit" />
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Team)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L3_Dev)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L3_Qa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L2_Support)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L3_Ba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adhoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Others)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Leave)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Team)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L3_Dev)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L3_Qa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L2_Support)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L3_Ba)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adhoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Others)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Leave)
+                </td>
+            </tr>
+        }
+    </table>
+
+</form>

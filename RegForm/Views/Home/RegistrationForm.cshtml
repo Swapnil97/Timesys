@@ -1,0 +1,49 @@
+﻿@model RegForm.Models.Reg
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegistrationForm</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>
+
+            Your ID: @Html.TextBoxFor(x => x.Id)
+
+        </p>
+
+        <p>
+
+            Your Department: @Html.TextBoxFor(x => x.Department)
+        </p>
+
+        <p>
+
+            Your DOJ: @Html.TextBoxFor(x => x.Dob)
+        </p>
+
+        <p>
+
+            Your Email: @Html.TextBoxFor(x => x.Email)
+        </p>
+
+        <p>
+
+            Your Designation: @Html.TextBoxFor(x => x.Designation)
+        </p>
+
+        <input type="submit" value="Check me" onclick=""/>
+
+    }
+    <div>
+    </div>
+</body>
+</html>

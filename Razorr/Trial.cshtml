@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+public SelectList Staff { get; set; }
+[BindProperty]
+public int SelectedStaffId { get; set; }
+public void OnGet()
+{
+    var staff = new List<Person>{
+        new Person{ Id = 1, Name = "Mike", Department = "IT"},
+        new Person{ Id = 2, Name = "Pete", Department = "Sales"},
+        new Person{ Id = 3, Name = "Katy", Department = "Admin"},
+        new Person{ Id = 4, Name = "Dean", Department = "Sales"}
+    };
+    Staff = new SelectList(staff, nameof(Person.Id), nameof(Person.Name), null, nameof(Person.Department));
+}
+ }}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <select asp-for="SelectedStaffId" asp-items="Model.Staff">
+            <option value=""></option>
+        </select>
+    </div>
+</body>
+</html>

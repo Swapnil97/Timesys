@@ -1,0 +1,55 @@
+﻿@model ViewtoControllerFormPost.Models.PersonModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using(Html.BeginForm("Index","Home",FormMethod.Post))
+    {
+    <table border="1">
+        <tr>
+            <th>Person Details </th>
+            <th>Enter here </th>
+        </tr>
+        <tr>
+            <td>Person ID :</td>
+            <td>@Html.TextBoxFor(m => m.PersonId)</td>
+        </tr>
+        <tr>
+            <td>Name :</td>
+            <td>@Html.TextBoxFor(m => m.Name)</td>
+        </tr>
+        <tr>
+            <td>Gender :</td>
+            <td>
+                @Html.DropDownListFor(m=>m.Gender,new List<SelectListItem>
+           {
+               new SelectListItem{Text="Male",Value="M"},
+               new SelectListItem{Text="Female",Value="F"}
+           }
+                    ,"Please select")
+            </td>
+        </tr>
+        <tr>
+            <td>City :
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.City)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit" /></td>
+        </tr>
+    </table>
+    }
+</body>
+</html>

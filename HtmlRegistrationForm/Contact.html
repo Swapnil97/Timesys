@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap assignment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="division">
+        <div class="jumbotron text-center">
+            <h1>Professional Details</h1>
+        </div>
+
+        <!--<form method="get" action="./About.html">-->
+        <div class="container-fluid">
+            <fieldset>
+                <h2 class="well">Other features</h2><br />
+                <h4 class="well">The <abbr title="Experience">EXP</abbr> matters of the employee.</h4><br />
+                <h4 class="well">Can You fill this <acronym title="as soon as possible">ASAP</acronym>?</h4>
+            </fieldset>
+        </div>
+        <br />
+        <br />
+        <table class="table">
+            <tr class="info">
+                <td class="label-danger">Name of Previous Company:</td>
+                <td><input type="text" id="PrevCompany" name="txt1" /></td>
+            </tr>
+            <tr class="info">
+                <td class="label-danger">Number of years of experience:</td>
+                <td><input type="text" id="Exp" name="txt2" /></td>
+            </tr>
+            <tr class="info">
+                <td class="label-danger">Designation:</td>
+                <td>
+                    <select name="designation" size="2" multiple>
+                        <option value="Lead" selected>Lead</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Tester">Tester</option>
+                        <option value="BA">BA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr class="info">
+                <td class="label-danger">Course Done:</td>
+                <td class="label-danger">
+                    <select name="course" id="designation" size="3" multiple>
+                        <option value="Computer Engineering" selected>Computer Engineering</option>
+                        <option value="IT Engineering">IT Engineering</option>
+                        <option value="BCA">BCA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="Mtech or Higher Degree">Mtech or Higher Degree</option>
+                    </select>
+                </td>
+            </tr>
+
+
+        </table>
+        <br />
+        <br />
+        <br />
+        <hr />
+        <!-- Left-aligned media object -->
+        <table class="table">
+            <tr>
+                <td class="media">
+                    <div class="media-left">
+                        <img src="Capture.png" class="media-object" style="width:150px;height:100px;">
+                    </div>
+                </td>
+                <td>
+                    <h4 class="media-heading">Pankaj Thapliyal</h4>
+                    <p>I love my company and my team mates.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--</form>-->
+
+    <address style="text-align:center; background-color:#ffd800;">
+        Written by <a href="https://ness.com">Rakesh Lad</a>.<br>
+        Visit us at:<br>
+        <mark>Example.com</mark>
+        <br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+
+    <ul class="pager">
+        <li><a href="Default.html">Previous</a></li>
+        <li><a href="About.html">Next</a></li>
+    </ul>
+
+    <!--</div>-->
+</body>
+</html>

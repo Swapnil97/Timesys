@@ -1,0 +1,31 @@
+﻿@model TimeZ.TimesheetExcel
+
+@{
+    ViewBag.Title = "Add New Entry";
+}
+
+        <h2>Add New Entry</h2> 
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="col-md-4">Name                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Name)</div>
+        <div class="col-md-4">Team                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Team)</div>
+        <div class="col-md-4">Shift                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Shift)</div>
+        <div class="col-md-4">Application                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Application)</div>
+        <div class="col-md-4">Task                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Task)</div>
+        <div class="col-md-4">Reference Number           : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Reference_Number)</div>
+        <div class="col-md-4">Activity                   : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Activity)</div>
+        <div class="col-md-4">Release                    : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Release)</div>
+        <div class="col-md-4">Priority Severity          : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Priority_Severity)</div>
+        <div class="col-md-4">Description                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Description)</div>
+        <div class="col-md-4">Hours spent this week      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Hours_spent_this_week)</div>
+        <div class="col-md-4">Month                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Month)</div>
+        <div class="col-md-4">Year                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Year)</div> <br />
+        <div class="col-md-8">
+            <input type="submit" value="Create Entry" />
+        </div>
+    </div>
+}
+
+
+

@@ -1,0 +1,16 @@
+﻿@model Razora.Models.UserModel
+
+@{
+    ViewBag.Title = "CountryDropDown";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+Country:
+
+@Html.DropDownListFor(model => model.Countries, Model.CountryList)
+
+<form asp-controller="Home" asp-action="IndexEnum" method="post">
+    <select asp-for="EnumCountry" asp-items="Html.GetEnumSelectList<CountryEnum>()">
+    </select>
+    <br /><button type="submit">Register</button>
+</form>
