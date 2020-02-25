@@ -200,5 +200,18 @@ namespace WebApplication2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("TrendsMonthsUpdated", monthnameParameter);
         }
+    
+        public virtual ObjectResult<string> GetMember(string userName, string password)
+        {
+            var userNameParameter = userName != null ?
+                new ObjectParameter("UserName", userName) :
+                new ObjectParameter("UserName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetMember", userNameParameter, passwordParameter);
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApplication2.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
         public ActionResult Index(string month = "Oct", int year = 2019)
         {

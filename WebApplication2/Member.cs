@@ -11,13 +11,20 @@ namespace WebApplication2
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Member
     {
         public int ID { get; set; }
+        [Required]
         public string Name { get; set; }
         public int TeamID { get; set; }
         public int PostID { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+        public Nullable<int> LoginFailedCount { get; set; }
+        public Nullable<System.DateTime> LastLoginDate { get; set; }
     
         public virtual Post Post { get; set; }
         public virtual Team Team { get; set; }

@@ -11,8 +11,7 @@ namespace WebApplication2
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class TimesheetExcel
     {
         public int ID { get; set; }
@@ -27,8 +26,6 @@ namespace WebApplication2
         public string Release { get; set; }
         public string Priority_Severity { get; set; }
         public string Description { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MMM/yyyy}")]
         public Nullable<System.DateTime> Start_Date { get; set; }
         public Nullable<double> Hours_spent_this_week { get; set; }
         public string Month { get; set; }
