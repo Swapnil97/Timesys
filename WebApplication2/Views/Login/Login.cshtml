@@ -41,7 +41,7 @@
 </head>
 <body>
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Login","Login"))
     {
     <div class="bs-example" style="border:2px solid gray;">
 
@@ -73,17 +73,11 @@
             }
         </div>
         <div class="loginbtn">
-
             <input type="submit" value="Login" class="btn btn-primary" />
-            @{ Response.Redirect("~/Views/NewEntry/AddUser.cshtml");}
         </div>
-        <div class="loginbtn">
-
-            <input type="submit" value="Admin" class="btn btn-primary" />
-            @{ Response.Redirect("~/Views/Upload/Index.cshtml");}
-        </div>
-    </div>
+     </div>   
     }
+        <input type="button" value="I am Admin!" class="btn btn-primary" />
 </body>
 </html>
 
