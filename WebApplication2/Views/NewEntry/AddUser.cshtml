@@ -35,30 +35,30 @@
 
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("AddUser", "NewEntry", FormMethod.Post))
 {
 <div class="container">
     <div class="col-md-4">Name                       : </div><div class="col-md-8"> @Html.DropDownListFor(m => m.Members.Name, ViewBag.MemberList as SelectList, new { @class = "form-control" })</div>
     <div class="col-md-4">Team                       : </div><div class="col-md-8"> @Html.DropDownListFor(m => m.Teams.Name, ViewBag.TeamList as SelectList, new { @class = "form-control" })</div>
-    @*<div class="col-md-4">Shift                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Shift)</div>
-    <div class="col-md-4">Application                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Application)</div>
-    <div class="col-md-4">Task                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Task)</div>
-    <div class="col-md-4">Reference Number           : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Reference_Number)</div>
-    <div class="col-md-4">Activity                   : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Activity)</div>
-    <div class="col-md-4">Release                    : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Release)</div>
-    <div class="col-md-4">Priority Severity          : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Priority_Severity)</div>
-    <div class="col-md-4">Description                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Description)</div>
-    <div class="col-md-4">Hours spent this week      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Hours_spent_this_week)</div>
-    <div class="col-md-4">Month                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Month)</div>
-    <div class="col-md-4">Year                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.Year)</div>*@
-    @*<div class="col-md-4">Date                       : </div>
-    <div>
-        <div class="col-md-8">
-            <div id="EnterDate">
-                @Html.EditorFor(m => m.Start_Date, new { htmlAttributes = new { @class = "form-control" } })
+    <div class="col-md-4">Shift                      : </div><div class="col-md-8"> @Html.DropDownListFor(m => m.Shifts.Name, ViewBag.ShiftList as SelectList, new { @class = "form-control" })</div>
+        <div class="col-md-4">Application                : </div><div class="col-md-8"> @Html.DropDownListFor(m => m.Applications.Name, ViewBag.AppicationList as SelectList, new { @class = "form-control" })</div>
+        <div class="col-md-4">Task                       : </div><div class="col-md-8"> @Html.DropDownListFor(m => m.Tasks.Name, ViewBag.TaskList as SelectList, new { @class = "form-control" })</div>
+        <div class="col-md-4">Activity                   : </div><div class="col-md-8">@Html.DropDownListFor(m => m.Activities.Name, ViewBag.ActivityList as SelectList, new { @class = "form-control" })</div>
+        <div class="col-md-4">Release                    : </div><div class="col-md-8">@Html.TextBoxFor(m => m.TimesheetExcels.Release)</div>
+        <div class="col-md-4">Priority Severity          : </div><div class="col-md-8">@Html.DropDownListFor(m => m.Priority.Name, ViewBag.PriorityList as SelectList, new { @class = "form-control" })</div>
+        <div class="col-md-4">Description                : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.TimesheetExcels.Description)</div>
+        <div class="col-md-4">Hours spent this week      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.TimesheetExcels.Hours_spent_this_week)</div>
+        <div class="col-md-4">Month                      : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.TimesheetExcels.Month)</div>
+        <div class="col-md-4">Year                       : </div><div class="col-md-8"> @Html.TextBoxFor(m => m.TimesheetExcels.Year)</div>
+
+    <div class="col-md-4">Date                       : </div>
+        <div>
+            <div class="col-md-8">
+                <div id="EnterDate">
+                    @Html.EditorFor(m => m.TimesheetExcels.Start_Date, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
             </div>
         </div>
-    </div>*@
 
 
     <div class="col-md-8">

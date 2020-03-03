@@ -12,17 +12,9 @@ namespace WebApplication2
     using System;
     using System.Collections.Generic;
     
-    public partial class Member
+    public partial class Priority_Severity
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int TeamID { get; set; }
-        public int PostID { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> LoginFailedCount { get; set; }
-        public Nullable<System.DateTime> LastLoginDate { get; set; }
-    
-        public virtual Post Post { get; set; }
-        public virtual Team Team { get; set; }
     }
 }

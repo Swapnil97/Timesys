@@ -41,43 +41,47 @@
 </head>
 <body>
 
-    @using (Html.BeginForm("Login","Login"))
+    @using (Html.BeginForm("Login", "Login"))
     {
-    <div class="bs-example" style="border:2px solid gray;">
+        <div class="bs-example" style="border:2px solid gray;">
 
-        <div class="form-group centerlook">
-            <h1> Login </h1>
-        </div>
-        <div class="form-group centerlook">
-            <label>User Name: </label>
-            @Html.EditorFor(model => model.Name)*
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
-        <div class="form-group centerlook">
-            <label>Password:</label>
-            @Html.EditorFor(model => model.Password) *
-            @Html.ValidationMessageFor(model => model.Password)
+            <div class="form-group centerlook">
+                <h1> Login </h1>
+            </div>
+            <div class="form-group centerlook">
+                <label>User Name:</label>
+                @Html.EditorFor(model => model.Name)*
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+            <div class="form-group centerlook">
+                <label>Password:</label>
+                @Html.EditorFor(model => model.Password) *
+                @Html.ValidationMessageFor(model => model.Password)
 
-        </div>
-        <div class="form-group error">
-            @if (@ViewBag.Failedcount != null)
-            {
+            </div>
+            <div class="form-group error">
+                @if (@ViewBag.Failedcount != null)
+                {
 
-                <label> Failed Attempt count is: @ViewBag.Failedcount</label>
-            }
+                    <label> Failed Attempt count is: @ViewBag.Failedcount</label>
+                }
 
-            @if (@ViewBag.NotValidUser != null)
-            {
+                @if (@ViewBag.NotValidUser != null)
+                {
 
-                <label> @ViewBag.NotValidUser</label>
-            }
+                    <label> @ViewBag.NotValidUser</label>
+                }
+            </div>
+            <div class="loginbtn">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
         </div>
-        <div class="loginbtn">
-            <input type="submit" value="Login" class="btn btn-primary" />
-        </div>
-     </div>   
     }
+    @using (Html.BeginForm("Index", "Upload"))
+    {
         <input type="button" value="I am Admin!" class="btn btn-primary" />
+    }
+
 </body>
 </html>
 

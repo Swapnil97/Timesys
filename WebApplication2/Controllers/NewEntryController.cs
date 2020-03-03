@@ -27,12 +27,47 @@ namespace WebApplication2.Controllers
             SqlDataAdapter _da1 = new SqlDataAdapter("select * from Member", constr);
             DataTable _dt1 = new DataTable();
             _da1.Fill(_dt1);
-            ViewBag.MemberList = ToSelectList(_dt1,"Name");
+            ViewBag.MemberList = ToSelectList(_dt1, "Name");
+
             SqlDataAdapter _da2 = new SqlDataAdapter("select * from Team", constr);
             DataTable _dt2 = new DataTable();
             _da2.Fill(_dt2);
-            ViewBag.TeamList = ToSelectList(_dt2,"Name");
+            ViewBag.TeamList = ToSelectList(_dt2, "Name");
 
+            //Shifts
+
+            SqlDataAdapter _da3 = new SqlDataAdapter("select * from Shift", constr);
+            DataTable _dt3 = new DataTable();
+            _da3.Fill(_dt3);
+            ViewBag.ShiftList = ToSelectList(_dt3, "Name");
+
+            //Applications
+
+            SqlDataAdapter _da4 = new SqlDataAdapter("select * from [Application]", constr);
+            DataTable _dt4 = new DataTable();
+            _da4.Fill(_dt4);
+            ViewBag.AppicationList = ToSelectList(_dt4, "Name");
+
+            //Tasks
+
+            SqlDataAdapter _da5 = new SqlDataAdapter("select * from Task", constr);
+            DataTable _dt5 = new DataTable();
+            _da5.Fill(_dt5);
+            ViewBag.TaskList = ToSelectList(_dt5, "Name");
+
+            //Applications
+
+            SqlDataAdapter _da6 = new SqlDataAdapter("select * from Activity", constr);
+            DataTable _dt6 = new DataTable();
+            _da6.Fill(_dt6);
+            ViewBag.ActivityList = ToSelectList(_dt6, "Name");
+
+            //Priority
+
+            SqlDataAdapter _da7 = new SqlDataAdapter("select * from Priority_Severity", constr);
+            DataTable _dt7 = new DataTable();
+            _da7.Fill(_dt7);
+            ViewBag.PriorityList = ToSelectList(_dt7, "Name");
             return View();
         }
 
@@ -47,10 +82,10 @@ namespace WebApplication2.Controllers
             db.SaveChanges();
             return Redirect("/NewEntry/Index");
         }
-    
+
 
         [NonAction]
-        public SelectList ToSelectList(DataTable table,string valueField)
+        public SelectList ToSelectList(DataTable table, string valueField)
         {
             List<SelectListItem> list = new List<SelectListItem>();
 
@@ -63,7 +98,7 @@ namespace WebApplication2.Controllers
                 });
             }
 
-            return new SelectList(list,"Text","Value");
+            return new SelectList(list, "Text", "Value");
         }
 
 

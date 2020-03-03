@@ -16,6 +16,10 @@
         <AssociationConnector Association="TrailTimeSysModel.FK_Member_Team" ManuallyRouted="false" />
         <AssociationConnector Association="TrailTimeSysModel.RolePost" ManuallyRouted="false" />
         <AssociationConnector Association="TrailTimeSysModel.RoleTask" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TrailTimeSysModel.Activity" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TrailTimeSysModel.Application" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TrailTimeSysModel.Priority_Severity" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TrailTimeSysModel.Shift" Width="1.5" PointX="4.75" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
