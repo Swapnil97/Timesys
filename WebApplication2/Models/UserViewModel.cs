@@ -18,5 +18,8 @@ namespace WebApplication2.Models
         public Priority_Severity Priority { get; set; }
         public string Description { get; set; }
         public string Release { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime Start_Date;
     }
 }

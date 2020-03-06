@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
@@ -72,13 +73,13 @@ namespace WebApplication2.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddUser(TimesheetExcel timesheetExcel)
+        public ActionResult AddUser(UserViewModel userViewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(timesheetExcel);
+                return View(userViewModel);
             }
-            db.TimesheetExcels.Add(timesheetExcel);
+            db.TimesheetExcels.Add(userViewModel);
             db.SaveChanges();
             return Redirect("/NewEntry/Index");
         }

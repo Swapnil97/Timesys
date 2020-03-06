@@ -34,6 +34,7 @@ namespace WebApplication2
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
         public virtual DbSet<TimesheetExcel> TimesheetExcels { get; set; }
+        public virtual DbSet<FirstEntry> FirstEntries { get; set; }
     
         public virtual ObjectResult<DisplayMonthlyTrends_Result> DisplayMonthlyTrends(string monthName, Nullable<int> year)
         {
@@ -213,5 +214,22 @@ namespace WebApplication2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetMember", userNameParameter, passwordParameter);
         }
+    }
+
+    public class FirstEntry
+    {
+        public string Team { get; set; }
+        public string Shift { get; set; }
+        public string Name { get; set; }
+        public string Application { get; set; }
+        public string Task { get; set; }
+        public string Activity { get; set; }
+        public string Release { get; set; }
+        public string Priority_Severity { get; set; }
+        public string Description { get; set; }
+        public Nullable<System.DateTime> Start_Date { get; set; }
+        public Nullable<double> Hours_spent_this_week { get; set; }
+        public string Month { get; set; }
+        public Nullable<int> Year { get; set; }
     }
 }
